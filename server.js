@@ -13,7 +13,10 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/profile'))
+app.use(require('./controllers/profile'));
+app.use(require('./controllers/api/death'));
+app.use(require('./controllers/api/story'));
+app.use(require('./controllers/api/winner'));
 
 // Starts the server to begin listening
 app.listen(PORT, () => {
