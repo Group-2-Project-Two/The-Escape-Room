@@ -1,0 +1,31 @@
+[
+    {
+        "story_text": "The Adventure Begins!",
+        "choice_A": "Go Through Door",
+        "choice_B": "Go Through Window",
+        "next_A": 2,
+        "next_B": 4
+    },
+    {
+        "story_text": "The Adventure Continues!",
+        "choice_A": "Go Upstairs",
+        "choice_B": "Go To Dungeon",
+        "next_A": 3,
+        "next_B": 4
+    },
+    {
+        "story_text": "Successful Adventure!",
+        "choice_A": "Play Again?",
+        "choice_B": "Quit?",
+        "next_A": 1,
+        "next_B":""
+    },
+    {
+        "story_text": "You Died!",
+        "choice_A": "Play Again?",
+        "choice_B": "Quit?",
+        "next_A": 1,
+        "next_B":""
+    }
+
+]
