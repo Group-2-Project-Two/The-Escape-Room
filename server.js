@@ -14,7 +14,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(require('./controllers/api/test-route'));
+app.use(require('./controllers/test-route'));
 
 // Starts the server to begin listening
 app.listen(PORT, () => {
