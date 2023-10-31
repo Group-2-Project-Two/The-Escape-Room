@@ -18,6 +18,9 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        death_count: {
+            type: DataTypes.INTEGER,
         }
     },
     {

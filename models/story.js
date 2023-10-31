@@ -11,9 +11,21 @@ Story.init(
             primaryKey: true,
             autoIncrement: true
         },
-        text: {
+        story_text: {
             type: DataTypes.TEXT,
             allowNull: false
+        },
+        choice_A: {
+            type: DataTypes.TEXT,
+        },
+        choice_B: {
+            type: DataTypes.TEXT,
+        },
+        next_A: {
+            type: DataTypes.TEXT,
+        },
+        next_B: {
+            type: DataTypes.TEXT,
         }
     },
     {
