@@ -17,6 +17,9 @@ app.use(require("./controllers/profile"));
 app.use(require("./controllers/api/death"));
 app.use(require("./controllers/api/story"));
 app.use(require("./controllers/api/winner"));
+app.use("/images", express.static(path.join(__dirname, "/public/images")));
+
+
 
 // Starts the server to begin listening
 app.listen(PORT, () => {
