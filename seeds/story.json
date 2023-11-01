@@ -1,27 +1,27 @@
 [
     {
-        "story_text": "The Adventure Begins!",
-        "choice_A": "Go Through Door",
-        "choice_B": "Go Through Window",
+        "story_text": "You find yourself in the entryway of a large, rather spooky, house. There appears to be a huge population of spiders who have taken up residence. The lighting is dim and there are concerning noices coming from further into the house. To your right there is a large door made out of a dark wood with a carved doorknob. To your left there is a stained glass window with the lower pane slightly ajar. What do you do?",
+        "choice_A": "Go through the large wood door",
+        "choice_B": "Go through the stained glass window",
         "next_A": 2,
         "next_B": 4
     },
     {
-        "story_text": "The Adventure Continues!",
-        "choice_A": "Go Upstairs",
-        "choice_B": "Go To Dungeon",
+        "story_text": "Moving through the door, the concerning noises appear to be slightly closer. The floorboards creak under your feet and you hear the wind whistling around the house. This room appears to have been a sitting room at some point in the past. Old overstuffed arm chairs are gathered around a squat clawed footed coffee table. Overdecorated lamps loom out of the darkness. You can see curved stairs leading towards the upper level off to your left. A moth eaten rug is on the floor, but one corner is flipped back and reveals an almost hidden trapdoor. What do you do?",
+        "choice_A": "Go upstairs",
+        "choice_B": "Go through trapdoor",
         "next_A": 3,
         "next_B": 4
     },
     {
-        "story_text": "Successful Adventure!",
+        "story_text": "Heading up the stairs, holding tightly to the railing (so as to not slip and fall to your certain death) you follow the curve around and around. The stairs seem to be endless and it is clear you are in a tower of some sort. Just as you begin to wonder if you should turn around, a soft light begins to appear. Excitedly, you hurry your pace and emerge into a cozy tower room. There is a crackling fire in the hearth and a inviting rocking chair. A note on the chair says 'It's your tower now, nerd'",
         "choice_A": "Play Again?",
         "choice_B": "Quit?",
         "next_A": 1,
         "next_B":""
     },
     {
-        "story_text": "You Died!",
+        "story_text": "Uh oh, it seems you slipped and fell to your death. What a pity.",
         "choice_A": "Play Again?",
         "choice_B": "Quit?",
         "next_A": 1,
