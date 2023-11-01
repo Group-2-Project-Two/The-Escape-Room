@@ -5,6 +5,53 @@ body {
   background: black;
 }
 
+.profile-header {
+  height: 250px;
+  background-image: url("/images/vecteezy_empty-night-room-background-dark-vector-apartment_13504181.jpg");
+  background-size: cover;
+  background-position: 100% 80%;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: "Press Start 2P", monospace, cursive;
+  display: flex;
+}
+
+.profile-header h1 {
+  margin: auto;
+  font-size: 50px;
+}
+
+.profile-container {
+  color: white;
+  font-family: "Press Start 2P", monospace, cursive;
+  margin: 50px;
+  padding: 25px;
+}
+
+.form-container {
+  padding: 30px;
+  border: 2px solid;
+  margin: 130px auto;
+  align-items: center;
+  max-width: 50%; 
+}
+
+.form-container h2 {
+  margin: 2px auto; 
+  padding: 10px; 
+  color: rgb(121, 129, 219); 
+}
+
+.text-center{
+  text-align: center;
+}
+
+
+
+
+
+
+
 .deathPage {
   display: flex;
   color: rgb(75, 5, 107);
@@ -69,11 +116,6 @@ body {
   50% {
     border-color: orange;
   }
-}
-
-.form-container {
-  display: flex;
-  justify-content: space-around;
 }
 
 .skulls {
