@@ -22,7 +22,26 @@ body {
   font-size: 50px;
 }
 
+.custom-border {
+  border: 5px blue dashed; 
+  max-width: 70%; 
+  margin: 15px auto;
+  padding: 0px 0px 20px; 
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*Death Page break */
 
 .deathPage {
   display: flex;
