@@ -8,7 +8,7 @@ body {
 
 .profile-header {
   height: 250px;
-  background-image: url("images/vecteezy_empty-night-room-background-dark-vector-apartment_13504181.jpg");
+  background-image: url("/images/vecteezy_empty-night-room-background-dark-vector-apartment_13504181.jpg");
   background-size: cover;
   background-position: 100% 80%;
   background-repeat: no-repeat;
@@ -88,6 +88,35 @@ body {
   text-align: center;
 }
 
+
+.winnerPage {
+  display: flex;
+  color: rgba(246, 209, 0, 0.727);
+  font-size: 21px;
+  line-height: 1.5;
+  padding: 32px 16px;
+  max-width: 960px;
+  font-family: "Press Start 2P", monospace, cursive;
+  justify-content: center;
+  align-items: center;
+}
+#winnerType {
+  color: gold;
+  font-family: "Press Start 2P", monospace, cursive;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /*Keeps the content on a single line*/
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  text-align: center;
+}
+#winnercolor {
+  color: gold;
+  font-family: "Press Start 2P", monospace, cursive;
+  text-align: center;
+}
+
 /* The typing effect */
 @keyframes typing {
   from {
@@ -116,4 +145,12 @@ body {
   margin: 30px 100px;
   border: 24px solid;
   border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
+}
+
+.trophies {
+  position: relative;
+  padding: 16px 0 24px;
+  max-width: 600px;
+  margin: 30px 100px;
+  border: 24px dashed gold;
 }
