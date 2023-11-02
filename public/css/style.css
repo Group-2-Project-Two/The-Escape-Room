@@ -4,6 +4,7 @@
 body {
   background: black;
   font-family: "Press Start 2P", monospace, cursive;
+  font-size: 1rem;
 }
 
 .profile-header {
@@ -19,7 +20,7 @@ body {
 
 .profile-header h1 {
   margin: auto;
-  font-size: 50px;
+  font-size: 2.25rem;
 }
 
 .custom-border {
@@ -43,7 +44,7 @@ body {
 
 .deathPage {
   display: flex;
-  color: rgb(75, 5, 107);
+  color: rgb(117, 73, 139);
   font-size: 21px;
   line-height: 1.5;
   padding: 32px 16px;
@@ -51,6 +52,7 @@ body {
   font-family: "Press Start 2P", monospace, cursive;
   justify-content: center;
   align-items: center;
+  background-color: rgb(17, 21, 23);
 }
 
 .death-image-size {
@@ -61,8 +63,9 @@ body {
 
 .death-button-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 20px 20px;
+  padding: 5px;
 }
 
 /* .deathPage h1 {
@@ -72,45 +75,12 @@ body {
 .typewriter h4 {
   color: #896a92;
   font-family: "Press Start 2P", monospace, cursive;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /*Keeps the content on a single line*/
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: pre; /* Allow new lines when the text overflows */
+  margin: 0 auto;
+  letter-spacing: 0.15em;
   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-  text-align: center;
-}
-
-.typewriter p {
-  margin: 20px;
-  text-align: center;
-}
-
-.winnerPage {
-  display: flex;
-  color: rgba(246, 209, 0, 0.727);
-  font-size: 21px;
-  line-height: 1.5;
-  padding: 32px 16px;
-  max-width: 960px;
-  font-family: "Press Start 2P", monospace, cursive;
-  justify-content: center;
-  align-items: center;
-}
-#winnerType {
-  color: gold;
-  font-family: "Press Start 2P", monospace, cursive;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /*Keeps the content on a single line*/
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-  text-align: center;
-}
-#winnercolor {
-  color: gold;
-  font-family: "Press Start 2P", monospace, cursive;
   text-align: center;
 }
 
@@ -135,19 +105,104 @@ body {
   }
 }
 
-.skulls {
-  position: relative;
-  padding: 16px 0 24px;
-  max-width: 600px;
-  margin: 30px 100px;
-  border: 24px solid;
-  border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
+.typewriter p {
+  margin: 20px;
+  text-align: center;
+}
+
+.winnerPage {
+  display: flex;
+  color: rgba(246, 209, 0, 0.727);
+  font-size: 21px;
+  line-height: 1.5;
+  padding: 32px 16px;
+  max-width: 960px;
+  font-family: "Press Start 2P", monospace, cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+.winner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .trophies {
   position: relative;
   padding: 16px 0 24px;
-  max-width: 600px;
+  max-width: 100rem;
   margin: 30px 100px;
   border: 24px dashed gold;
+  background-color: rgb(24, 22, 2);
+}
+
+.winnerImage {
+  display: block;
+  margin: 25px auto;
+  max-width: 10rem;
+  border-radius: 50%;
+}
+
+#winnerType {
+  color: gold;
+  font-family: "Press Start 2P", monospace, cursive;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /*Keeps the content on a single line*/
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  text-align: center;
+}
+#winnercolor {
+  color: gold;
+  font-family: "Press Start 2P", monospace, cursive;
+  text-align: center;
+}
+
+.skulls {
+  position: relative;
+  padding: 16px 0 24px;
+  max-width: 80%;
+  margin: 30px 100px;
+  border: 24px solid;
+  border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
+}
+
+/* .typewriter-wrap{
+  word-wrap: break-word;
+  max-width: 60%;
+} */
+
+/*Story Page Section*/
+
+.story-container {
+  border: 3px saddlebrown solid;
+  text-align: center;
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 25px;
+}
+
+.storyImage-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* flex-direction: column; */
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.choices img {
+  width: 350px;
+  height: 400px;
+  margin: 0px 5px 20px 5px;
+  border-radius: 35%;
 }
