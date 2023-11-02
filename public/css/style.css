@@ -146,3 +146,11 @@ body {
   border: 24px solid;
   border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
 }
+
+.trophies {
+  position: relative;
+  padding: 16px 0 24px;
+  max-width: 600px;
+  margin: 30px 100px;
+  border: 24px dashed gold;
+}
