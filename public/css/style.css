@@ -8,7 +8,7 @@ body {
 
 .profile-header {
   height: 250px;
-  background-image: url("/images/vecteezy_empty-night-room-background-dark-vector-apartment_13504181.jpg");
+  background-image: url("../images/vecteezy_empty-night-room-background-dark-vector-apartment_13504181.jpg");
   background-size: cover;
   background-position: 100% 80%;
   background-repeat: no-repeat;
@@ -23,23 +23,21 @@ body {
 }
 
 .custom-border {
-  border: 5px blue dashed; 
-  max-width: 70%; 
+  border: 5px blue dashed;
+  max-width: 70%;
   margin: 15px auto;
-  padding: 0px 0px 20px; 
+  padding: 0px 0px 20px;
 }
 
+.custom-profile-image {
+  max-width: 75%;
+  border-radius: 20%;
+}
 
-
-
-
-
-
-
-
-
-
-
+#glow:hover {
+  box-shadow: 5px 5px 5px 5px rgba(218, 229, 228, 0.7);
+  transition: box-shadow 0.8s ease-in-out;
+}
 
 /*Death Page break */
 
@@ -87,7 +85,6 @@ body {
   margin: 20px;
   text-align: center;
 }
-
 
 .winnerPage {
   display: flex;
