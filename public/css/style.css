@@ -4,7 +4,7 @@
 body {
   background: black;
   font-family: "Press Start 2P", monospace, cursive;
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 
 .profile-header {
@@ -64,8 +64,6 @@ body {
 .death-button-container {
   display: flex;
   justify-content: space-evenly;
-  margin: 20px 20px;
-  padding: 5px;
 }
 
 /* .deathPage h1 {
@@ -178,18 +176,21 @@ body {
 /*Story Page Section*/
 
 .story-container {
-  border: 3px saddlebrown solid;
+  border: 2px rgb(28, 55, 28) solid; 
+  max-width: 80%; 
   text-align: center;
-  max-width: 80%;
   margin: 20px auto;
   padding: 25px;
+  background-color: rgb(6, 7, 6);
+  border-radius: 10%;
+
 }
 
 .storyImage-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* flex-direction: column; */
+
 }
 
 .choices {
@@ -201,8 +202,23 @@ body {
 }
 
 .choices img {
-  width: 350px;
-  height: 400px;
+  width: 20rem;
+  height: 20rem;
   margin: 0px 5px 20px 5px;
   border-radius: 35%;
+  border: 1rem rgb(28, 55, 28) solid;
+}
+
+.choices button {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgb(28, 55, 28);
+  color: white;
+}
+
+.choices button:hover {
+  background-color: rgb(215, 229, 215);
+  color: black;
+  box-shadow: 1px 1px 5px 5px rgba(61, 64, 61, 0.7);
+  transition: box-shadow 0.8s ease-in-out;
 }
