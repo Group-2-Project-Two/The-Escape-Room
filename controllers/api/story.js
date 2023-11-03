@@ -12,7 +12,7 @@ router.get('/story', async (req, res) => {
   }
 });
 
-router.get('/story/continue', async (req, res) => {
+router.post('/story/continue', async (req, res) => {
   try {
     const storyData = await Story.findOne({ where: { keyword: req.params.choice_A }})
     console.log("story data", storyData)

@@ -1,11 +1,13 @@
+const buttons = document.querySelectorAll("button");
+
 const moveStory = async function (event) {
   const selected = event.target;
   if (selected.matches("#choiceA")) {
-    console.log("choice A");
-    await sendSelectionToBackend("A");
+    console.log(selected.textContent);
+    await sendSelectionToBackend(selected.textContent);
   } else if (selected.matches("#choiceB")) {
-    console.log("choice B");
-    await sendSelectionToBackend("B");
+    console.log(selected.textContent);
+    await sendSelectionToBackend(selected.textContent);
   }
 };
 
