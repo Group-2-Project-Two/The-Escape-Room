@@ -11,6 +11,10 @@ Story.init(
             primaryKey: true,
             autoIncrement: true
         },
+        keyword: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
         story_text: {
             type: DataTypes.TEXT,
             allowNull: false
