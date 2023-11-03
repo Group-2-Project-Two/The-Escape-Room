@@ -13,7 +13,7 @@ body {
 
 .profile-header {
   height: 250px;
-  background-image: url("../images/vecteezy_empty-night-room-background-dark-vector-apartment_13504181.jpg");
+  background-image: url("/images/dark-room.jpg");
   background-size: cover;
   background-position: 100% 80%;
   background-repeat: no-repeat;
