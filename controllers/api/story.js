@@ -4,7 +4,7 @@ const Story = require('../../models/story')
 router.get('/story', async (req, res) => {
   try {
     const storyData = await Story.findOne({ where: { keyword: "beginning" }})
-    console.log("story data", storyData)
+    // console.log("story data", storyData)
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
@@ -13,9 +13,9 @@ router.get('/story', async (req, res) => {
 });
 
 router.post('/story/continue', async (req, res) => {
-  try {
-    const storyData = await Story.findOne({ where: { keyword: req.params.choice_A }})
-    console.log("story data", storyData)
+    console.log("req body: ", req.body)
+  try { 
+    const storyData = await Story.findOne({ where: { keyword: "death" }})
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
