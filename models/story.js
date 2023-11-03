@@ -26,6 +26,13 @@ Story.init(
         },
         next_B: {
             type: DataTypes.TEXT,
+        },
+        image_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'image',
+                key: 'id'
+            }
         }
     },
     {
