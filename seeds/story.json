@@ -1,44 +1,173 @@
 [
     {
-        "story_text": "You find yourself in the entryway of a large, rather spooky, house. There appears to be a huge population of spiders who have taken up residence. The lighting is dim and there are concerning noices coming from further into the house. To your right there is a large door made out of a dark wood with a carved doorknob. To your left there is a stained glass window with the lower pane slightly ajar. What do you do?",
-        "keyword": "beginning",
-        "choice_A": "Go through the large wood door",
-        "choice_B": "Go through the stained glass window",
-        "next_A": 2,
-        "next_B": 4,
-        "image_id": 1
-    },
-    {
-        "story_text": "Moving through the door, the concerning noises appear to be slightly closer. The floorboards creak under your feet and you hear the wind whistling around the house. This room appears to have been a sitting room at some point in the past. Old overstuffed arm chairs are gathered around a squat clawed footed coffee table. Overdecorated lamps loom out of the darkness. You can see curved stairs leading towards the upper level off to your left. A moth eaten rug is on the floor, but one corner is flipped back and reveals an almost hidden trapdoor. What do you do?",
-        "keyword": "sittingRoom",
-        "choice_A": "Go upstairs",
-        "choice_B": "Go through trapdoor",
-        "next_A": 3,
-        "next_B": 4
-    },
-    {
-        "story_text": "Heading up the stairs, holding tightly to the railing (so as to not slip and fall to your certain death) you follow the curve around and around. The stairs seem to be endless and it is clear you are in a tower of some sort. Just as you begin to wonder if you should turn around, a soft light begins to appear. Excitedly, you hurry your pace and emerge into a cozy tower room. There is a crackling fire in the hearth and a inviting rocking chair. A note on the chair says 'It's your tower now, nerd'",
-        "keyword": "tower",
-        "choice_A": "Play Again?",
-        "choice_B": "Quit?",
-        "next_A": 1
-    },
-    {
-        "story_text": "Uh oh, it seems you slipped and fell to your death. What a pity.",
-        "keyword": "death",
-        "choice_A": "Play Again?",
-        "choice_B": "Quit?",
-        "next_A": 1,
-        "image_id": 2
-    },
-    {
-        "story_text": "Congratulations you have successfully escaped!",
+        "story_text": "Congratulations! You made it out alive. How does it feel? Do you have a sense of great accomplishment? How many times did you die along the way?",
+        "type": "win",
         "keyword": "winner",
         "choice_A": "Play Again?",
-        "choice_B": "Quit?",
-        "next_A": 1,
-        "image_id": 3
-    }
-
-
+        "choice_B": "Quit while you're ahead?",
+        "next_A": 11
+    },
+    {
+        "story_text": "Uh oh, it seems you somehow managed to slip and fall to your death. What a pity. You were doing so well too. Such a promising start.",
+        "type": "death",
+        "keyword": "falldamage",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11 
+    },
+    {
+        "story_text": "Well would you look at that. You fell asleep when you should have been playing the game. I'm afraid I'll have to mark that one as a death. You really have to stay more involved.",
+        "type": "death",
+        "keyword": "sleep",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11 
+    },
+    {
+        "story_text": "Oh my, you've bonked your head quite hard. Must have tripped on something in the dark. I don't think you'll be recovering from that. Live and learn I guess. Or in your case, die and don't.",
+        "type": "death",
+        "keyword": "head_trauma",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11
+    },
+    {
+        "story_text": "What on earth do you want? In my day, if a game saw fit to give me a wonky paperclip I would count my blessing and try my luck. But nooo we need something better. Well just for that we're ending things here.",
+        "type": "death",
+        "keyword": "ungrateful",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11 
+    },
+    {
+        "story_text": "What story do you think you're in? Lord of the Rings? Please. We couldn't afford the rights to that IP.",
+        "type": "death",
+        "keyword": "pockets",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11 
+    },
+    {
+        "story_text": "It's so boring you died. Are you happy now? Your brain did it's best but there is only so long you can expect it to stand up against an ENTIRE BOOK OF BUILDING CODES.",
+        "type": "death",
+        "keyword": "read_codes",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11 
+    },
+    {
+        "story_text": "Hm. It appears that the note was poisoned and you died. My bad. I thought we'd fixed that little issue. Oops.",
+        "type": "death",
+        "keyword": "read_note",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11 
+    },
+    {
+        "story_text": "Congratulations! You found the large and very deep pit! And you fell in it! And you died!",
+        "type": "death",
+        "keyword": "deathpit",
+        "choice_A": "Play Again?",
+        "choice_B": "Give up?",
+        "next_A": 11
+    },
+    {
+        "story_text": "You somehow find yourself in a room you don't recognize. You're holding a note in your hand that says 'See if you can find your way out'. Looking around, you're in an old study. The only furniture in the room is a desk, a large armchair, and a bookcase. There's a plush, if worn, rug covering the floor. You see a large solid wooden door to your right and a stained glass window to your left. What do you do? ",
+        "type": "story",
+        "keyword": "beginning1",
+        "choice_A": "Check out the window.",
+        "choice_B": "Try the door.",
+        "next_A": 12,
+        "next_B": 13
+    },
+    {
+        "story_text": "You find yourself in a room that looks familiar but you can't remember why... You're holding a note in your hand that says 'See if you can find your way out this time'. Looking around, you're in an old study. The only furniture in the room is a desk, a large armchair, and a bookcase. There's a plush, if worn, rug covering the floor. You see a large solid wooden door to your right and a stained glass window to your left. What do you do?",
+        "type": "story",
+        "keyword": "beginning2",
+        "choice_A": "Check out the window.",
+        "choice_B": "Try the door.",
+        "next_A": 12,
+        "next_B": 13
+    },
+    {
+        "story_text": "Moving over to the window, you can see that the bottom section is hinged. It doesn't appear to be locked, and you could probably pry it open. Outside you can hear the wind whistling through what might be trees. Maybe you could climb through and get out of here?",
+        "type": "story",
+        "keyword": "window",
+        "choice_A": "Climb out the window and escape.",
+        "choice_B": "Try the door.",
+        "next_A": 2,
+        "next_B": 13
+    },
+    {
+        "story_text": "Walking up to the door, you realized just how huge it actually is. This must have been made when there were still true old growth forests around. You try the handle and it doesn't budge. Locked apparently. The hinges are large and solid looking with the hinge pins on the other side unfortunately. Putting your ear to the door, you can't hear anything on the other side. What do you do?",
+        "type": "story",
+        "keyword": "door",
+        "choice_A": "Take a look at the bookcase.",
+        "choice_B": "Sit in the chair.",
+        "next_A": 14,
+        "next_B": 3
+    },
+    {
+        "story_text": "The bookcase is stuffed full of books. I mean really crammed in there. You couldn't fit another one even if you wanted to. They range from instructional guides for electrical work to the history of soda bottle design. A couple stand out. Which one do you take a closer look at?",
+        "type": "story",
+        "keyword": "bookcase",
+        "choice_A": "Lock picking for dummies.",
+        "choice_B": "Building codes for hidden passages.",
+        "next_A": 15,
+        "next_B": 16
+    },
+    {
+        "story_text": "It's the dryest book you've ever had the displeasure of reading. But it does the trick. You are filled with the knowledge of how to pick any lock. Now if only you had something to do it with.",
+        "type": "story",
+        "keyword": "lock_picking",
+        "choice_A": "Search the desk.",
+        "choice_B": "Look in your pockets. ",
+        "next_A": 17,
+        "next_B": 6
+    },
+    {
+        "story_text": "Opening up 'Building Codes for Hidden Passages', a large amount of sawdust falls out. You sneeze violently and drop the book on the floor. A folded scrap of paper falls out and goes sliding under the rug.",
+        "type": "story",
+        "keyword": "building_codes",
+        "choice_A": "Flip up the corner of the rug.",
+        "choice_B": "Read the book.",
+        "next_A": 18,
+        "next_B": 7
+    },
+    {
+        "story_text": "Whoever uses this desk really needs a lesson on how to organize. It takes what feels like forever, but you finally find a slightly wonky paperclip.",
+        "type": "story",
+        "keyword": "desk",
+        "choice_A": "Pick the lock in the door.",
+        "choice_B": "Keep looking for something better.",
+        "next_A": 19,
+        "next_B": 5
+    },
+    {
+        "story_text": "Flipping over the edge of the rug, you see the folded piece of paper. It's lying on top of a slightly scary looking trapdoor with a heavy iron ring set in it.",
+        "type": "story",
+        "keyword": "rug",
+        "choice_A": "Read the note.",
+        "choice_B": "Open the trapdoor.",
+        "next_A": 8,
+        "next_B": 20
+    },
+    {
+        "story_text": "With your newfound abilities and trusty, if slightly wonky, paperclip in hand you approach the door. It's a mind game you see? Can't let the lock know you fear it. After a short struggle, you win. The lock is vanquished and the door swings open. It's so dark on the other side you can't see anything beyond the doorway.",
+        "type": "story",
+        "keyword": "pick_lock",
+        "choice_A": "Go through door.",
+        "choice_B": "Go back to read the other book.",
+        "next_A": 4,
+        "next_B": 7
+    },
+    {
+        "story_text": "With a small creak, the trapdoor swings open and lands with a crash on the floor because you forgot to hold onto it. You see a ladder descending down into the depths. It appears there are small lights set into the walls on the way down. Careful not to fall or knock your head on anything, you begin to descend. It feels like it takes forever but finally you reach the bottom. Turning around you see two doors. ",
+        "type": "story",
+        "keyword": "trapdoor",
+        "choice_A": "Take the one on the right.",
+        "choice_B": "Take the one on the left. ",
+        "next_A": 9,
+        "next_B": 1
+    },
 ]

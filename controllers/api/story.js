@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const Story = require('../../models/story')
 
+let nextStoryLocation
+
 router.get('/story', async (req, res) => {
   try {
-    const storyData = await Story.findOne({ where: { keyword: "beginning" }})
-    // console.log("story data", storyData)
+    const storyData = await Story.findOne({ where: { keyword: "beginning1" }})
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
@@ -13,9 +14,35 @@ router.get('/story', async (req, res) => {
 });
 
 router.post('/story/continue', async (req, res) => {
-    console.log("req body: ", req.body)
-  try { 
-    const storyData = await Story.findOne({ where: { keyword: "death" }})
+    const choiceType = req.body.data.id
+    const choiceText = req.body.data.text
+    try {
+      if (choiceType == "choiceA") { 
+          const storyData = await Story.findOne({ 
+            where: {
+                choice_A: choiceText
+            }
+          })
+          nextStoryLocation = storyData.dataValues.next_A
+          //use obj destruct for these
+          res.json(nextStoryLocation)
+      } else { 
+          const storyData = await Story.findOne({ 
+            where: {
+                choice_B: choiceText
+            }
+          })
+          nextStoryLocation = storyData.dataValues.next_B
+          res.json(nextStoryLocation)
+    }}
+    catch (err) {
+    res.status(500).json(err)
+  }
+});
+
+router.get('/story/continue', async (req, res) => {
+  try {
+    const storyData = await Story.findByPk(nextStoryLocation)
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
@@ -24,3 +51,5 @@ router.post('/story/continue', async (req, res) => {
 });
 
 module.exports = router;
+
+// add IF/ELSE to be able to move to DEATH or WINNER depending on where in the story we are. Don't want this route to continue with those options.
