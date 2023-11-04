@@ -5,7 +5,7 @@ let nextStoryLocation
 
 router.get('/story', async (req, res) => {
   try {
-    const storyData = await Story.findOne({ where: { keyword: "beginning" }})
+    const storyData = await Story.findOne({ where: { keyword: "beginning1" }})
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
@@ -51,3 +51,5 @@ router.get('/story/continue', async (req, res) => {
 });
 
 module.exports = router;
+
+// add IF/ELSE to be able to move to DEATH or WINNER depending on where in the story we are. Don't want this route to continue with those options.
