@@ -1,12 +1,12 @@
 <section class="winnerPage trophies">
   <div class="typewriter winner-container">
-    <h4 id="winnerType">Congratulations!
-      <br />You made it through
-      <br />successfully!</h4>
+    <h4 id="winnerType"> 
+      {{story_text}}
+    </h4>
 
     <img
       class="pulse winnerImage"
-      src="/images/vecteezy_gold-trophy-vector-illustration_.jpg"
+      src= {{image_id}}
     />
 
     <div class="highPage">
@@ -34,7 +34,8 @@
         </tbody>
       </table>
       <div class="death-button-container">
-        <button>Try Again?</button>
+        <button>{{choice_A}}</button>
+        <button>{{choice_B}}</button>
       </div>
     </div>
   </div>
