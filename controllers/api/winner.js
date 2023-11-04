@@ -1,15 +1,7 @@
 const router = require('express').Router();
 const Story = require('../../models/story')
-/*const test = [
-    {
-      name: 'this is a test',
-    },
-  ];
-  router.get('/winner', async (req, res) => {
-    res.render('winner');
-  });*/
 
-  router.get('/winner', async (req, res) => {
+router.get('/winner', async (req, res) => {
     try {
       const winnerData = await Story.findOne({
         where: {
