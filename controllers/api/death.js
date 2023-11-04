@@ -1,15 +1,6 @@
 const router = require('express').Router();
 const Story = require('../../models/story')
 
-// const test = [
-//     {
-//       name: 'this is a test',
-//     },
-//   ];
-//   router.get('/death', async (req, res) => {
-//     res.render('death');
-//   });
-
 router.get('/death', async (req, res) => {
   try {
     const deathData = await Story.findByPk(4)

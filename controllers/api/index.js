@@ -6,6 +6,7 @@ const winnerRoute = require('./winner.js')
 
 router.use('/death', deathRoute);
 router.use('/story', storyRoute);
+router.use('/story/continue', storyRoute)
 router.use('/winner', winnerRoute);
 
 module.exports = router;
