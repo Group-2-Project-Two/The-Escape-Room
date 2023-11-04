@@ -30,6 +30,15 @@
         "choice_B": "Quit?",
         "next_A": 1,
         "image_id": 2
+    },
+    {
+        "story_text": "Congratulations you have successfully escaped!",
+        "keyword": "winner",
+        "choice_A": "Play Again?",
+        "choice_B": "Quit?",
+        "next_A": 1,
+        "image_id": 3
     }
+
 
 ]
