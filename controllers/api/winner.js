@@ -11,9 +11,13 @@ const Story = require('../../models/story')
 
   router.get('/winner', async (req, res) => {
     try {
-      const winnerData = await Story.findOne({ where: { keyword: "winner" }})
+      const winnerData = await Story.findOne({
+        where: {
+        keyword: "winner"
+        }
+        })
       // change query to not hardcode primary key
-      // update winner in seeds from tower to winner
+      // Figure out rendering images through routes not hard code
       console.log(winnerData)
       const winner = winnerData.get({ plain: true})
       res.render('winner', winner)
