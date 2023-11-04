@@ -1,4 +1,4 @@
-/*death page */
+/*Main Handlebar page */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 body {
@@ -26,6 +26,8 @@ body {
   margin: auto;
   font-size: 2.25rem;
 }
+
+/*Profile page*/
 
 .custom-border {
   border: 5px blue dashed;
@@ -66,14 +68,10 @@ body {
   margin: auto;
 }
 
-.death-button-container {
+.button {
   display: flex;
   justify-content: space-evenly;
 }
-
-/* .deathPage h1 {
-  text-align: center;
-} */
 
 .typewriter h4 {
   color: #896a92;
@@ -109,10 +107,21 @@ body {
   }
 }
 
-.typewriter p {
+.death-question {
   margin: 20px;
   text-align: center;
 }
+
+.skulls {
+  position: relative;
+  padding: 16px 0 16px;
+  max-width: 100%;
+  margin: 30px 0 30px;
+  border: 24px solid;
+  border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
+}
+
+/* Winner Page */
 
 .winnerPage {
   display: flex;
@@ -153,7 +162,7 @@ body {
   font-family: "Press Start 2P", monospace, cursive;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /*Keeps the content on a single line*/
+  white-space: wrap; /*Keeps the content on a single line*/
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
@@ -166,20 +175,6 @@ body {
   text-align: center;
 }
 
-.skulls {
-  position: relative;
-  padding: 16px 0 16px;
-  max-width: 100%;
-  margin: 30px 0 30px;
-  border: 24px solid;
-  border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
-}
-
-/* .typewriter-wrap{
-  word-wrap: break-word;
-  max-width: 60%;
-} */
-
 /*Story Page Section*/
 
 .story-container {
@@ -190,7 +185,6 @@ body {
   padding: 25px;
   background-color: rgb(6, 7, 6);
   border-radius: 10%;
-
 }
 
 .storyImage-container {
