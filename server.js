@@ -4,7 +4,6 @@ const exphbs = require("express-handlebars");
 const path = require("path");
 const hbs = exphbs.create({});
 
-
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -16,7 +15,7 @@ app.use(express.static("images"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(require("./controllers/profile"));
+app.use(require("./controllers/sign_in"));
 app.use(require("./controllers/api/death"));
 app.use(require("./controllers/api/story"));
 app.use(require("./controllers/api/winner"));

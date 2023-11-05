@@ -1,12 +1,24 @@
 const router = require("express").Router();
 const User = require("../models/user");
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 
 router.get("/", async (req, res) => {
   res.render("profile");
 });
 
-router.post("/create", async (req, res) => {
+router.get("/signIn", async (req, res) => {
+  try {
+    const getAllUsers = await User.findAll({
+      userName: req.body.userName,
+      password: req.body.passowrd,
+    });
+    console.log(getAllUsers)
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post("/signIn", async (req, res) => {
   console.log(req.body);
   try {
     const newUser = await User.create({
@@ -19,14 +31,12 @@ router.post("/create", async (req, res) => {
   }
 });
 
-
-router.post("/return", async (req, res) => {
-
+router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
       where: { userName: req.body.userName },
     });
-    console.log("User:", userData)
+    console.log("User:", userData);
 
     if (!userData) {
       res

@@ -5,7 +5,7 @@ const signupFormHandler = async function (event) {
   // console.log(usernameEl.value);
   // console.log(passwordEl.value);
 
-  const response = await fetch("/create", {
+  const response = await fetch("/signIn", {
     method: "POST",
     body: JSON.stringify({
       userName: usernameEl.value.trim(),
@@ -17,7 +17,7 @@ const signupFormHandler = async function (event) {
   if (response.ok) {
     document.location.replace("/story");
   } else {
-    alert("Failed to sign up");
+    alert("Failed to sign up. Please select a different username");
   }
 };
 
@@ -30,7 +30,7 @@ const userLogin = async function (event) {
   // console.log(returnPassword.value);
 
   if (returnUsername && returnPassword) {
-    const response = await fetch("/return", {
+    const response = await fetch("/login", {
       method: "POST",
       body: JSON.stringify({
         userName: returnUsername.value,

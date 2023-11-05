@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const deathRoute = require('./death.js')
 const storyRoute = require('./story.js')
 const winnerRoute = require('./winner.js')
