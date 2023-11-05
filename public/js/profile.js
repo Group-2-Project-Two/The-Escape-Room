@@ -2,8 +2,8 @@ const signupFormHandler = async function (event) {
   event.preventDefault();
   const usernameEl = document.querySelector("#newUsername");
   const passwordEl = document.querySelector("#inputPassword1");
-  console.log(usernameEl.value);
-  console.log(passwordEl.value);
+  // console.log(usernameEl.value);
+  // console.log(passwordEl.value);
 
   const response = await fetch("/create", {
     method: "POST",
@@ -26,8 +26,8 @@ const userLogin = async function (event) {
   const returnUsername = document.getElementById("returnUsername");
   const returnPassword = document.getElementById("returnPassword");
 
-  console.log(returnUsername.value);
-  console.log(returnPassword.value);
+  // console.log(returnUsername.value);
+  // console.log(returnPassword.value);
 
   if (returnUsername && returnPassword) {
     const response = await fetch("/return", {

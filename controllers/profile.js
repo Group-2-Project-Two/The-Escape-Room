@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/user");
+const bcrypt = require('bcrypt');
 
 router.get("/", async (req, res) => {
   res.render("profile");
@@ -18,7 +19,9 @@ router.post("/create", async (req, res) => {
   }
 });
 
+
 router.post("/return", async (req, res) => {
+
   try {
     const userData = await User.findOne({
       where: { userName: req.body.userName },
