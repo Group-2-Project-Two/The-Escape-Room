@@ -23,6 +23,7 @@ router.post("/return", async (req, res) => {
     const userData = await User.findOne({
       where: { userName: req.body.userName },
     });
+    console.log("User:", userData)
 
     if (!userData) {
       res
@@ -39,8 +40,6 @@ router.post("/return", async (req, res) => {
         .json({ message: "Incorrect username or password, please try again" });
       return;
     }
-
-    // Handle the successful login here
   } catch (err) {
     res.status(400).json({ message: "This did not work" });
   }

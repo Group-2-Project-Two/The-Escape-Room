@@ -33,8 +33,8 @@ const userLogin = async function (event) {
     const response = await fetch("/return", {
       method: "POST",
       body: JSON.stringify({
-        userName: returnUsername,
-        password: returnPassword,
+        userName: returnUsername.value,
+        password: returnPassword.value,
       }),
 
       headers: { "Content-Type": "application/json" },
