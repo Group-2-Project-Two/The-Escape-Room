@@ -5,7 +5,7 @@ const signupFormHandler = async function (event) {
   console.log(usernameEl.value);
   console.log(passwordEl.value);
 
-  const response = await fetch("/", {
+  const response = await fetch("/create", {
     method: "POST",
     body: JSON.stringify({
       userName: usernameEl.value.trim(),
@@ -21,8 +21,6 @@ const signupFormHandler = async function (event) {
   }
 };
 
-
-
 const userLogin = async function (event) {
   event.preventDefault();
   const returnUsername = document.getElementById("returnUsername");
@@ -31,19 +29,22 @@ const userLogin = async function (event) {
   console.log(returnUsername.value);
   console.log(returnPassword.value);
 
-  const response = await fetch("/", {
-    method: "POST",
-    body: JSON.stringify({
-      userName: returnUsername.value.trim(),
-      password: returnPassword.value.trim(),
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
-  console.log("response", response);
-  if (response.ok) {
-    document.location.replace("/story");
-  } else {
-    alert("login failed");
+  if (returnUsername && returnPassword) {
+    const response = await fetch("/return", {
+      method: "POST",
+      body: JSON.stringify({
+        userName: returnUsername,
+        password: returnPassword,
+      }),
+
+      headers: { "Content-Type": "application/json" },
+    });
+    console.log("response", response);
+    if (response.ok) {
+      document.location.replace("/story");
+    } else {
+      alert("login failed");
+    }
   }
 };
 
