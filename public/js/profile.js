@@ -21,9 +21,6 @@ const signupFormHandler = async function (event) {
   }
 };
 
-
-
-
 document
   .querySelector("#createUser")
   .addEventListener("submit", signupFormHandler);

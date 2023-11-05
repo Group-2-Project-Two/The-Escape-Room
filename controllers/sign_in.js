@@ -25,16 +25,7 @@ router.post("/", async (req, res) => {
       userName: req.body.userName,
       password: req.body.password,
     });
-
-    // req.session.save(() => {
-    //   req.session.userId = newUser.id;
-    //   req.session.username = newUser.username;
-    //   req.session.loggedIn = true;
-
-    //   res.json(newUser);
-    // });
-
-    console.log(newUser);
+    res.redirect("/story");
   } catch (err) {
     res.status(500).json(err);
   }
@@ -46,25 +37,29 @@ router.get("/login", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
-    const userData = await User.findOne({
-      where: { userName: req.body.userName },
+    const { userName, password } = req.body;
+
+    const user = await User.findOne({
+      where: { userName },
     });
 
-    if (!userData) {
+    if (!user) {
       res
         .status(400)
         .json({ message: "Incorrect username or password, please try again" });
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const isPasswordValid = await userData.checkPassword(password);
 
-    if (!validPassword) {
+    if (!isPasswordValid) {
       res
         .status(400)
         .json({ message: "Incorrect username or password, please try again" });
       return;
     }
+
+    console.log("user found");
   } catch (err) {
     res.status(400).json({ message: "This did not work" });
   }

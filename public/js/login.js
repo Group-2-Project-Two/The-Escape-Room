@@ -1,28 +1,26 @@
-const userLogin = async function (event) {
-  event.preventDefault();
-  const returnUsername = document.getElementById("returnUsername");
-  const returnPassword = document.getElementById("returnPassword");
+const form = document.getElementById("loginUser");
 
-  console.log(returnUsername.value);
-  console.log(returnPassword.value);
+form.addEventListener("submit", async function (event) {
+  event.preventDefault(); // Prevent the form from submitting
+  const username = document.getElementById("returnUsername").value;
+  const password = document.getElementById("returnPassword").value;
 
-  if (returnUsername && returnPassword) {
-    const response = await fetch("/login", {
-      method: "POST",
-      body: JSON.stringify({
-        userName: returnUsername.value,
-        password: returnPassword.value,
-      }),
+  console.log("Username:", username);
+  console.log("Password:", password);
 
-      headers: { "Content-Type": "application/json" },
-    });
-    console.log("response", response);
-    if (response.ok) {
-      document.location.replace("/story");
-    } else {
-      alert("login failed");
-    }
+  const response = await fetch("/login", {
+    method: "POST",
+    body: JSON.stringify({
+      userName: username,
+      password: password,
+    }),
+
+    headers: { "Content-Type": "application/json" },
+  });
+  console.log("response", response);
+  if (response.ok) {
+    document.location.replace("/story");
+  } else {
+    alert("login failed");
   }
-};
-
-document.querySelector("#returnUser").addEventListener("submit", userLogin);
+});

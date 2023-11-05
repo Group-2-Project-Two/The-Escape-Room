@@ -15,6 +15,7 @@ app.use(express.static("images"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(require("./controllers/index"));
 app.use(require("./controllers/sign_in"));
 app.use(require("./controllers/api/death"));
 app.use(require("./controllers/api/story"));
