@@ -10,7 +10,7 @@ const moveStory = async function (event) {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      console.log("Response ok! Would move page along now")
+      // console.log("Response ok! Would move page along now")
       document.location.replace("/story/continue");
     }
   } catch (error) {
