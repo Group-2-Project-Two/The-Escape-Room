@@ -53,13 +53,18 @@ router.post('/story/continue', async (req, res) => {
           })
           console.log("hit choice A")
           nextStoryLocation = storyData.dataValues.next_A
+          const nextStory = await Story.findOne({
+            where: {
+              id: nextStoryLocation
+            }
+          })
           console.log(storyData)
-          if (storyData.dataValues.type == "death") {
+          if (nextStory.dataValues.type == 'death') {
             console.log("hit death")
-            res.redirect(307, '/death')
-          } else if (storyData.dataValues.type == "win") {
+            res.render('death')
+          } else if (nextStory.dataValues.type == 'win') {
             console.log("hit win")
-            res.redirect(307, '/winner')
+            res.render('winner')
           } else {
             console.log("hit next story location")
             res.json(nextStoryLocation)
@@ -72,13 +77,18 @@ router.post('/story/continue', async (req, res) => {
           })
           console.log("hit choice B")
           nextStoryLocation = storyData.dataValues.next_B
+          const nextStory = await Story.findOne({
+            where: {
+              id: nextStoryLocation
+            }
+          })
           console.log(storyData)
-          if (storyData.dataValues.type == "death") {
+          if (nextStory.dataValues.type == 'death') {
             console.log("hit death")
-            res.redirect(307, '/death')
-          } else if (storyData.dataValues.type == "win") {
+            res.render('death')
+          } else if (nextStory.dataValues.type == 'win') {
             console.log("hit win")
-            res.redirect(307, '/winner')
+            res.render('winner')
           } else {
             console.log("hit next story location")
             res.json(nextStoryLocation)
@@ -101,4 +111,3 @@ router.get('/story/continue', async (req, res) => {
 
 module.exports = router;
 exports.nextStoryLocation = nextStoryLocation
-// add IF/ELSE to be able to move to DEATH or WINNER depending on where in the story we are. Don't want this route to continue with those options.

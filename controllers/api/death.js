@@ -4,7 +4,8 @@ const nextStoryLocation = require('./story')
 
 router.get('/death', async (req, res) => {
   try {
-    const deathData = await Story.findOne({ where: { id: nextStoryLocation }})
+    // const deathData = await Story.findOne({ where: { id: nextStoryLocation }})
+    const deathData = await Story.findOne({ where: { id: 3 }})
     console.log(deathData)
     const death = deathData.get({ plain: true})
     res.render('death', death)
