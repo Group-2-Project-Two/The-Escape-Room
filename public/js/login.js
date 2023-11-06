@@ -1,7 +1,7 @@
 const form = document.getElementById("loginUser");
 
 form.addEventListener("submit", async function (event) {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault(); 
   const username = document.getElementById("returnUsername").value;
   const password = document.getElementById("returnPassword").value;
 
