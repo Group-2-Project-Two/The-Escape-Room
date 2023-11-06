@@ -21,6 +21,6 @@ form.addEventListener("submit", async function (event) {
   if (response.ok) {
     document.location.replace("/story");
   } else {
-    alert("login failed");
+    alert("Your login failed. Have you created an account?");
   }
 });
