@@ -3,6 +3,7 @@ const Story = require('../../models/story')
 const nextStoryLocation = require('./story')
 
 router.get('/death', async (req, res) => {
+  console.log("next? ", nextStoryLocation)
   try {
     // const deathData = await Story.findOne({ where: { id: nextStoryLocation }})
     const deathData = await Story.findOne({ where: { id: 3 }})
