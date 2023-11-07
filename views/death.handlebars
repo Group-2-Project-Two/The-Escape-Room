@@ -1,17 +1,18 @@
 <section class="deathPage skulls container">
   <div class="text-container">
     <h4 class="text-typewriter">
-      {{story_text}}
+      Too bad, so sad.
     </h4>
     <img
       src="/images/deathPage-background.png"
       class="zoomer death-image-size"
     />
-    <p class="death-question">Would you like to try again?</p>
+    <p class="death-question">You sure you don't want to try again?</p>
     <div class="button">
-      <button class="death-button slideLeft">{{choice_A}}</button>
-      <button class="death-button slideRight">{{choice_B}}</button>
+      <button id="again" class="death-button slideLeft">Fine.</button>
+      <button id="leave" class="death-button slideRight">No.</button>
     </div>
   </div>
 </section>
-<script src="/js/story.js"></script>
+<script src="/js/death.js"></script>
+
