@@ -1,26 +1,26 @@
 <section class="winnerPage trophies">
   <div class="text-container">
     <h4 class="winnerType text-typewriter">
-      {{story_text}}
+      Congratulations! You made it out alive!
     </h4>
 
     <img class="pulse winnerImage" src="/images/trophy.jpg" />
 
     <div class="highPage">
-      <table id="winnercolor">
+      {{!-- <table id="winnercolor">
         <tbody>
           <tr>
             <td>Your Death Count:</td>
             <td>0</td>
           </tr>
         </tbody>
-      </table>
+      </table> --}}
       <br />
       <div class="button">
-        <button class="winnerButton">{{choice_A}}</button>
-        <button class="winnerButton">{{choice_B}}</button>
+        <button id="home" class="winnerButton">Home</button>
       </div>
     </div>
   </div>
 </section>
-<script src="/js/story.js"></script>
+
+<script src="/js/win.js"></script>
