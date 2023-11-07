@@ -1,8 +1,9 @@
 /*Main Handlebar page */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 
 body {
-  background-image: radial-gradient(black, rgb(7, 7, 21));
+  background-image: radial-gradient(black, rgb(27, 27, 69));
   font-family: "Press Start 2P", monospace, cursive;
   font-size: 0.5rem;
 }
@@ -17,11 +18,13 @@ body {
 }
 .text-container {
   margin: auto;
+  padding: 15px;
 }
 
 .text-typewriter {
-  line-height: 1;
+  line-height: 1.5;
   color: rgb(93, 124, 157);
+  font-family: "Special Elite", monospace;
 }
 
 .custom-login:hover {
@@ -88,6 +91,20 @@ body {
 .button {
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
+}
+
+.death-button {
+  background-color: rgb(24, 140, 111);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.death-button:hover {
+  background-color: rgb(241, 51, 51);
+color: white;
+
 }
 
 .typewriter h4 {
@@ -104,17 +121,17 @@ body {
 }
 
 /* The typing effect */
-@keyframes typing {
+/* @keyframes typing {
   from {
     width: 0;
   }
   to {
     width: 100%;
   }
-}
+} */
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
+/* @keyframes blink-caret {
   from,
   to {
     border-color: transparent;
@@ -122,7 +139,7 @@ body {
   50% {
     border-color: orange;
   }
-}
+} */
 
 .death-question {
   margin: 20px;
@@ -132,8 +149,8 @@ body {
 .skulls {
   position: relative;
   padding: 16px 0 16px;
-  max-width: 100%;
-  margin: 30px 0 30px;
+  max-width: 80%;
+  margin: 30px auto;
   border: 24px solid;
   border-image: url(https://skullctf.com/images/skull-9.svg) 24 round;
 }
@@ -170,26 +187,33 @@ body {
 .winnerImage {
   display: block;
   margin: 25px auto;
-  max-width: 10rem;
+  max-width: 15rem;
   border-radius: 50%;
 }
 
-#winnerType {
+.winnerType {
   color: gold;
-  font-family: "Press Start 2P", monospace, cursive;
+  font-family: "Special Elite", monospace, cursive;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
+  /* border-right: 0.15em solid orange; The typwriter cursor */
   white-space: wrap; /*Keeps the content on a single line*/
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  /* animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; */
   text-align: center;
   max-width: 100%;
 }
-#winnercolor {
-  color: gold;
-  font-family: "Press Start 2P", monospace, cursive;
-  text-align: center;
+
+.winnerButton{
+  padding: 8px; 
+  border-radius: 10%;
+  background-color: rgb(26, 26, 21);
+  color: rgb(143, 147, 104)
+}
+
+.winnerButton:hover {
+  background-color: rgb(40, 86, 40);
+  color: black;
 }
 
 /*Story Page Section*/
@@ -199,7 +223,7 @@ body {
   max-width: 80%;
   text-align: center;
   margin: 20px auto;
-  padding: 25px;
+  padding: 50px 50px 25px;
   background-color: rgb(6, 7, 6);
   border-radius: 10%;
 }
@@ -208,6 +232,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 10px;
+  margin: 5px;
 }
 
 .choices {
@@ -218,19 +244,21 @@ body {
   margin: 5px;
 }
 
-.choices img {
+/* .choices img {
   width: 20rem;
   height: 20rem;
   margin: 0px 5px 20px 5px;
   border-radius: 35%;
   border: 1rem rgb(28, 55, 28) solid;
-}
+} */
 
 .choices button {
   padding: 20px;
   border-radius: 15px;
   background-color: rgb(28, 55, 28);
   color: white;
+  font-size: .8rem;
+  margin: 30px 0px 0px 0px;
 }
 
 .choices button:hover {
@@ -238,4 +266,10 @@ body {
   color: black;
   box-shadow: 1px 1px 5px 5px rgba(61, 64, 61, 0.7);
   transition: box-shadow 0.8s ease-in-out;
+}
+
+#winnercolor {
+  color: gold;
+  font-family: "Press Start 2P", monospace, cursive;
+  text-align: center;
 }
