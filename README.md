@@ -34,3 +34,4 @@ Deploying to heroku: https://www.bezkoder.com/deploy-node-js-app-heroku-cleardb-
 
 Seeding mySQL: https://stackoverflow.com/questions/69196421/seed-mysql-database-on-heroku
 
+Typewriter reference; https://www.youtube.com/watch?v=MiTJnYHX3iA

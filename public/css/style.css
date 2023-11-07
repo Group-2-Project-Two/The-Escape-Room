@@ -2,13 +2,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 body {
-  background: black;
+  background-image: radial-gradient(black, rgb(7, 7, 21));
   font-family: "Press Start 2P", monospace, cursive;
   font-size: 0.5rem;
 }
 
-.center{
+.center {
   align-items: center;
+}
+
+.custom-login {
+  text-decoration: none;
+  color: white;
+}
+.text-container {
+  margin: auto;
+}
+
+.text-typewriter {
+  line-height: 1;
+  color: rgb(93, 124, 157);
+}
+
+.custom-login:hover {
+  color: rgb(203, 157, 83);
 }
 
 .profile-header {
@@ -178,8 +195,8 @@ body {
 /*Story Page Section*/
 
 .story-container {
-  border: 2px rgb(28, 55, 28) solid; 
-  max-width: 80%; 
+  border: 2px rgb(28, 55, 28) solid;
+  max-width: 80%;
   text-align: center;
   margin: 20px auto;
   padding: 25px;
@@ -191,7 +208,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
 
 .choices {
