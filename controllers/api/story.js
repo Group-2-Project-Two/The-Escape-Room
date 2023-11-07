@@ -5,9 +5,9 @@ let nextStoryLocation
 
 router.get('/story', async (req, res) => {
   try {
-    const storyData = await Story.findOne({ where: { keyword: "beginning1" }})
+    const storyData = await Story.findOne({ where: { keyword: "beginning1" }})    //looks for a story section with a specific keyword
     const storySection = storyData.get({ plain: true })
-    res.render('story', storySection)
+    res.render('story', storySection)       //renders "story" and passes the storySection data
   } catch (err) {
     res.status(500).json(err)
   }
@@ -15,7 +15,7 @@ router.get('/story', async (req, res) => {
 
 router.post('/story/continue', async (req, res) => {
     const choiceType = req.body.data.id
-    const choiceText = req.body.data.text
+    const choiceText = req.body.data.text             //extract the choice type and choice text from the request
     try {
       if (choiceType == "choiceA") { 
           const storyData = await Story.findOne({ 
@@ -25,7 +25,7 @@ router.post('/story/continue', async (req, res) => {
           })
           nextStoryLocation = storyData.dataValues.next_A
           //use obj destruct for these
-          res.json(nextStoryLocation)
+          res.json(nextStoryLocation)                               //determine which choice the user made (either "choiceA" or "choiceB"). Story.findOne() method to find the next story section.
       } else { 
           const storyData = await Story.findOne({ 
             where: {
@@ -42,7 +42,7 @@ router.post('/story/continue', async (req, res) => {
 
 router.get('/story/continue', async (req, res) => {
   try {
-    const storyData = await Story.findByPk(nextStoryLocation)
+    const storyData = await Story.findByPk(nextStoryLocation)   //retrieve the corresponding story section from the database 
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
