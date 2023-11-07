@@ -1,8 +1,9 @@
 /*Main Handlebar page */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 body {
-  background-image: radial-gradient(black, rgb(7, 7, 21));
+  background-image: radial-gradient(black, rgb(27, 27, 69));
   font-family: "Press Start 2P", monospace, cursive;
   font-size: 0.5rem;
 }
@@ -20,8 +21,9 @@ body {
 }
 
 .text-typewriter {
-  line-height: 1;
+  line-height: 1.5;
   color: rgb(93, 124, 157);
+  font-family: "Special Elite", monospace;
 }
 
 .custom-login:hover {
@@ -174,15 +176,15 @@ body {
   border-radius: 50%;
 }
 
-#winnerType {
+.winnerType {
   color: gold;
-  font-family: "Press Start 2P", monospace, cursive;
+  font-family: "Special Elite", monospace, cursive;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
+  /* border-right: 0.15em solid orange; The typwriter cursor */
   white-space: wrap; /*Keeps the content on a single line*/
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  /* animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; */
   text-align: center;
   max-width: 100%;
 }

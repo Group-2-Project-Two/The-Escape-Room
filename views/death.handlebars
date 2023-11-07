@@ -1,17 +1,17 @@
-
-
-    <section class="deathPage skulls container">
-      <div class="typewriter">
-        <h4>
-          {{story_text}}
-        </h4>
-        <img
-          src="/images/deathPage-background.png"
-          class="zoomer death-image-size" />
-        <p class="death-question">Would you like to try again?</p>
-        <div class="button">
-          <button>{{choice_A}}</button>
-          <button>{{choice_B}}</button>
-        </div>
-      </div>
-    </section>
+<section class="deathPage skulls container">
+  <div class="text-container">
+    <h4 class="text-typewriter">
+      {{story_text}}
+    </h4>
+    <img
+      src="/images/deathPage-background.png"
+      class="zoomer death-image-size"
+    />
+    <p class="death-question">Would you like to try again?</p>
+    <div class="button">
+      <button class="slideLeft">{{choice_A}}</button>
+      <button class="slideRight">{{choice_B}}</button>
+    </div>
+  </div>
+</section>
+<script src="/js/death.js"></script>
