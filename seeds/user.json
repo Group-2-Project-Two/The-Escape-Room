@@ -1,0 +1,13 @@
+[
+  {
+    "userName": "Bob",
+    "password": "123",
+    "death_count": "0"
+  },
+
+  {
+    "userName": "Susie",
+    "password": "abc",
+    "death_count": "1"
+  }
+]

@@ -1,9 +1,9 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const apiRoutes = require('./api/');
-const profileRoute = require('./profile.js');
+const apiRoutes = require("./api/");
+const signIn = require("./sign_in.js");
 
-router.use('/', profileRoute);
-router.use('/api', apiRoutes);
+router.use("/", signIn);
+router.use("/api", apiRoutes);
 
 module.exports = router;

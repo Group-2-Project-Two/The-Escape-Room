@@ -6,9 +6,9 @@ let nextStory
 
 router.get('/story', async (req, res) => {
   try {
-    const storyData = await Story.findOne({ where: { keyword: "beginning1" }})
+    const storyData = await Story.findOne({ where: { keyword: "beginning1" }})    //looks for a story section with a specific keyword
     const storySection = storyData.get({ plain: true })
-    res.render('story', storySection)
+    res.render('story', storySection)       //renders "story" and passes the storySection data
   } catch (err) {
     res.status(500).json(err)
   }
@@ -26,6 +26,7 @@ router.get('/story/continue', async (req, res) => {
 
 router.post('/story/continue', async (req, res) => {
     const choiceType = req.body.data.id
+
     const choiceText = req.body.data.text
     console.log("hit route")
     try {
@@ -46,6 +47,7 @@ router.post('/story/continue', async (req, res) => {
           const nextStorySection = nextStory.get({ plain: true })
           console.log(nextStorySection)
           return res.json(nextStorySection)
+
       } else { 
           const storyData = await Story.findOne({ 
             where: {

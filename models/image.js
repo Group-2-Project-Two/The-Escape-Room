@@ -13,7 +13,7 @@ Image.init(
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false                  //define the model's attributes, including the data types and properties for each column in the table.
         }
     },
     {
