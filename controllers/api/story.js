@@ -2,6 +2,7 @@ const router = require('express').Router();
 const Story = require('../../models/story')
 
 let nextStoryLocation
+let nextStory
 
 router.get('/story', async (req, res) => {
   try {
@@ -13,36 +14,9 @@ router.get('/story', async (req, res) => {
   }
 });
 
-router.post('/story/continue', async (req, res) => {
-    const choiceType = req.body.data.id
-    const choiceText = req.body.data.text             //extract the choice type and choice text from the request
-    try {
-      if (choiceType == "choiceA") { 
-          const storyData = await Story.findOne({ 
-            where: {
-                choice_A: choiceText
-            }
-          })
-          nextStoryLocation = storyData.dataValues.next_A
-          //use obj destruct for these
-          res.json(nextStoryLocation)                               //determine which choice the user made (either "choiceA" or "choiceB"). Story.findOne() method to find the next story section.
-      } else { 
-          const storyData = await Story.findOne({ 
-            where: {
-                choice_B: choiceText
-            }
-          })
-          nextStoryLocation = storyData.dataValues.next_B
-          res.json(nextStoryLocation)
-    }}
-    catch (err) {
-    res.status(500).json(err)
-  }
-});
-
 router.get('/story/continue', async (req, res) => {
   try {
-    const storyData = await Story.findByPk(nextStoryLocation)   //retrieve the corresponding story section from the database 
+    const storyData = await Story.findByPk(nextStoryLocation)
     const storySection = storyData.get({ plain: true })
     res.render('story', storySection)
   } catch (err) {
@@ -50,6 +24,51 @@ router.get('/story/continue', async (req, res) => {
   }
 });
 
-module.exports = router;
+router.post('/story/continue', async (req, res) => {
+    const choiceType = req.body.data.id
 
-// add IF/ELSE to be able to move to DEATH or WINNER depending on where in the story we are. Don't want this route to continue with those options.
+    const choiceText = req.body.data.text
+    console.log("hit route")
+    try {
+    console.log("hit first try")
+      if (choiceType == "choiceA") { 
+          const storyData = await Story.findOne({ 
+            where: {
+                choice_A: choiceText
+            }
+          })
+          console.log("hit choice A")
+          nextStoryLocation = storyData.dataValues.next_A
+          nextStory = await Story.findOne({
+            where: {
+              id: nextStoryLocation
+            }
+          })
+          const nextStorySection = nextStory.get({ plain: true })
+          console.log(nextStorySection)
+          return res.json(nextStorySection)
+
+      } else { 
+          const storyData = await Story.findOne({ 
+            where: {
+                choice_B: choiceText
+            }
+          })
+          console.log("hit choice B")
+          nextStoryLocation = storyData.dataValues.next_B
+          nextStory = await Story.findOne({
+            where: {
+              id: nextStoryLocation
+            }
+          })
+          const nextStorySection = nextStory.get({ plain: true })
+          console.log(nextStorySection)
+          return res.json(nextStorySection)
+    }}
+    catch (err) {
+    res.status(500).json(err)
+  }
+});
+
+module.exports = router;
+exports.nextStoryLocation = nextStoryLocation

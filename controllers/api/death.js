@@ -1,10 +1,12 @@
 const router = require('express').Router();
 const Story = require('../../models/story')
+const nextStoryLocation = require('./story')
 
 router.get('/death', async (req, res) => {
+  console.log("next? ", nextStoryLocation)
   try {
-    const deathData = await Story.findOne({ where: { keyword: "death" }})   // find the story section with the keyword "death."
-    // change query to not hardcode primary key
+    // const deathData = await Story.findOne({ where: { id: nextStoryLocation }})
+    const deathData = await Story.findOne({ where: { id: 3 }})
     console.log(deathData)
     const death = deathData.get({ plain: true})
     res.render('death', death)
