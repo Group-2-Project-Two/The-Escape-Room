@@ -44,11 +44,28 @@
 
             <div class ="col-4">
               <img 
+              data-bs-toggle="modal" data-bs-target="#passwordRequirement"
                 id="glow"
                 class="custom-profile-image"
                 src="/images/password-img.jpg"
-                alt="password icon" />
-            </div>
+                alt="password icon" >
+                    <div class="modal fade text-black" id="passwordRequirement" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                           <h1 class="modal-title fs-5" id="ModalLabel">Password requirements</h1>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                         <div class="modal-body">
+                             Your password must be 8 characters in length. 
+                         </div>
+                         <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                         </div>
+                       </div>
+                      </div>
+                    </div>
+             </div>
 
             <div class="row mb-3 text-center just">
               <div class="col-sm-12">
