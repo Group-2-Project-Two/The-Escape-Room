@@ -24,6 +24,9 @@ User.init(
     password: {                            //define the model's attributes, including the data types and properties for each column in the table
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len:[8]
+      }
     },
     death_count: {
       type: DataTypes.INTEGER,
