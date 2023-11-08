@@ -5,17 +5,16 @@ https://github.com/Group-2-Project-Two/The-Escape-Room
 
 https://the-escape-room-b6b7539c84ae.herokuapp.com/
 
-
-## Screenshots:
-![Alt text](image.png)
-![Alt text](image-1.png)
-![Alt text](image-2.png)
-
 ## Description:
     As a group, we wanted to create a small and fun choose your own adventure game similar
      to the goosebumps books but with a retro video game feel.  After creating a user, 
      you are prompted with choices. These choices change the possible outcomes of the game
       by either advancing you further along or making you start all over.
+
+## Screenshots:
+![Alt text](./public/images/image.png)
+![Alt text](./public/images/image-1.png)
+![Alt text](./public/images/image-2.png)
 
 ## User Story:
     As a user,
