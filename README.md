@@ -51,3 +51,6 @@ Express: https://expressjs.com/
 CSS Framework: https://getbootstrap.com/  https://www.w3schools.com/css/css3_animations.asp
 
 Wireframe tool: https://whimsical.com/
+
+Typewriter reference; https://www.youtube.com/watch?v=MiTJnYHX3iA
+

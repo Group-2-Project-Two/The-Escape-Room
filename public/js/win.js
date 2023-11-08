@@ -1,16 +1,10 @@
-const againButton = document.getElementById("again")
-const leaveButton = document.getElementById("leave")
+const homeButton = document.getElementById("home");
 
-function moveToAgain() {
-    location.replace("/story")
+function movePage() {
+    location.replace("/login")
 }
 
-function leavePage() {
-    location.replace("/")
-}
-
-againButton.addEventListener("click", moveToAgain)
-leaveButton.addEventListener("click", leavePage)
+homeButton.addEventListener("click", movePage)
 
 const div = document.querySelector(".text-typewriter");
 const innerHTML = div.innerHTML;

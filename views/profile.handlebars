@@ -3,18 +3,18 @@
     <div class="container">
 
 
-    <a class ='p-2 mt-5 text-white d-flex justify-content-end' href="/login">Login instead</a>
+    <a class ='p-2 mt-5 fs-6 d-flex justify-content-end custom-login' href="/login">Login instead</a>
       <section class="custom-border form-container text-white mt-5">
-        <form id="createUser">
+        <form class ="m-3 p-2"id="createUser">
           <div class="row justify-content-center text-center">
             <h3 class="mt-5">Welcome new adventurers</h3>
-            <p>Create your username and password below</p>
+            <p class="fs-6 text">Create your username and password</p>
           </div>
 
-          <div class="container">
+          <div class="container m-3 p-2">
             <div class="row justify-content-start text-center">
               <div class="col-7">
-                <label for="inputEmail2" class="col-nform-label"
+                <label for="inputEmail2" class="mb-2 col-nform-label"
                   >Create your username</label
                 >
 
@@ -22,7 +22,7 @@
                   <input
                     placeholder="username"
                     type="username"
-                    class="text-center form-control"
+                    class="mb-3 text-center form-control"
                     id="newUsername" />
                 </div>
               </div>
@@ -36,7 +36,7 @@
                 <div class="justify-content-center">
                   <input
                     placeholder="password"
-                    type="new-password"
+                    type="password"
                     class="text-center form-control"
                     id="inputPassword1" />
                 </div>
@@ -50,13 +50,13 @@
                 src="/images/password-img.jpg"
                 alt="password icon" >
                     <div class="modal fade text-black" id="passwordRequirement" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
+                      <div class="modal-dialog text-bg-secondary p-3">
+                        <div class="modal-content text-bg-info p-3">
                           <div class="modal-header">
-                           <h1 class="modal-title fs-5" id="ModalLabel">Password requirements</h1>
+                           <h1 class="modal-title fs-5" id="ModalLabel">Password Requirements</h1>
                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
-                         <div class="modal-body">
+                         <div class="modal-body fs-6 text">
                              Your password must be 8 characters in length. 
                          </div>
                          <div class="modal-footer">
@@ -67,11 +67,11 @@
                     </div>
              </div>
 
-            <div class="row mb-3 text-center just">
+            <div class="row mb-1 text-center">
               <div class="col-sm-12">
                 <button
                   type="submit"
-                  class="btn btn-primary justify-contetnt-center">
+                  class="pulse btn btn-primary">
                  Play Game
                 </button>
               </div>
